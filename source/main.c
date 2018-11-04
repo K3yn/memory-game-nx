@@ -34,7 +34,8 @@ void displayGame(){
 	SDL_RenderClear(renderer);
 	
 	SDL_DrawRect(renderer,0,0,1280,768,WHITE);
-	SDL_DrawText(renderer, Roboto_60, 60, 15, GRAY, "MEMORY PAIRS");//
+	SDL_DrawText(renderer, Roboto_60, 60, 15, GRAY, "MEMORY GAME -");//
+	SDL_DrawText(renderer, Roboto_60, 540, 15, RED, "NX");//
 	if(mode_main_menu)
 	{
 		SDL_DrawText(renderer, Roboto_80, 500, 200, GRAY, "PLAY");//
