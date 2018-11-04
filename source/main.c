@@ -63,12 +63,10 @@ void displayGame(){
 		displayReverseCards(); // 
 	}
 
-	
 	//SDL_DrawImageScale(icon.texture, 20, 600, 96, 96);
 	//SDL_DrawImageScale(iconframe.texture, 20, 600, 96, 96);
 	//SDL_DrawText(renderer, Roboto_large, 130, 630, BLACK, username);
 
-	
 	SDL_RenderPresent(renderer);				
 }
 
@@ -197,6 +195,7 @@ int main(int argc, char **argv)
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_SOFTWARE);
 	
 	load_textures(); // 
+	load_fonts();// 
 	loadIniVars();
 	generaArrayReverseCard();
 	randomArray();
@@ -215,7 +214,9 @@ int main(int argc, char **argv)
         if (kDown & KEY_PLUS || salir) break; // break in order to return to hbmenu
 		
 		displayGame();//
+	    	manageControls();
     }// 
+	
 	SDL_DestroyWindow(window);// 
 	
 	TTF_Quit();
